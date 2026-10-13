@@ -1,0 +1,29 @@
+### Maven ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### db ###
+db-data/
+**/db/db-data/
+*.sqlite
+*.db
+
+### env ###
+.env
+.env.*
+!.env.example
+*.local
+
+### logs ###
+*.log
+logs/
