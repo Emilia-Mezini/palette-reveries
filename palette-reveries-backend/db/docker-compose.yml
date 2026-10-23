@@ -1,0 +1,21 @@
+services:
+  db:
+    container_name: db
+    image: mariadb:11
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: asdf1234
+      MARIADB_DATABASE: palettereveries
+      MARIADB_ROOT_HOST: '%'
+    volumes:
+      - ./db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+  adminer:
+    image: adminer
+    container_name: palette-reveries-adminer
+    restart: always
+    ports:
+      - 7070:8080
+    depends_on:
+      - db
