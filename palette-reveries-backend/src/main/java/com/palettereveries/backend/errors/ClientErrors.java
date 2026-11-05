@@ -24,6 +24,20 @@ public class ClientErrors {
         return log(new ResponseStatusException(HttpStatus.CONFLICT,"artwork with title:"+title));
     }
 
+    public static ResponseStatusException usernameTaken(String username){
+        return log(new ResponseStatusException(HttpStatus.CONFLICT,"username:"+ username+" already taken"));
+    }
+
+    public static ResponseStatusException emailTaken(String email){
+        return log(new ResponseStatusException(HttpStatus.CONFLICT,"email: "+ email+" already taken."));
+
+    }
+
+    public static  ResponseStatusException userNotFound(Long id){
+        return log(new ResponseStatusException(HttpStatus.NOT_FOUND,"user with id: "+id));
+    }
+
+
 
 
 
