@@ -20,5 +20,11 @@ public class ClientErrors {
         return log(new ResponseStatusException(HttpStatus.NOT_FOUND,"artwork with id: "+ id));
     }
 
+    public static ResponseStatusException artworkTitleTaken(String title){
+        return log(new ResponseStatusException(HttpStatus.CONFLICT,"artwork with title:"+title));
+    }
+
+
+
 
 }
