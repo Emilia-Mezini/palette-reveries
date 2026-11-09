@@ -83,4 +83,8 @@ public class Order {
     public AppUser getBuyer() {
         return buyer;
     }
+
+    public void setBuyer(AppUser buyer) {
+        this.buyer = buyer;
+    }
 }

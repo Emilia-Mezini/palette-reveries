@@ -25,10 +25,8 @@ public class Review {
 
     public Review(){}
 
-    public Review(String message,AppUser author, Artwork artwork,int rating){
+    public Review(String message,int rating){
         this.message = message;
-        this.author = author;
-        this.artwork = artwork;
         this.rating = rating;
     }
 
@@ -54,6 +52,10 @@ public class Review {
 
     public AppUser getAuthor() {
         return author;
+    }
+
+    public void setAuthor(AppUser author){
+        this.author = author;
     }
 
     public int getRating() {

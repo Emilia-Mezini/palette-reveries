@@ -1,6 +1,7 @@
 package com.palettereveries.backend.errors;
 
 
+import com.palettereveries.backend.entities.Review;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +42,27 @@ public class ClientErrors {
         return log(new ResponseStatusException(HttpStatus.NOT_FOUND,"inquiry with id: "+id));
     }
 
+    public static ResponseStatusException reviewNotFound(Long id){
+        return log(new ResponseStatusException(HttpStatus.NOT_FOUND,"review with id: "+id));
+    }
+
+    public static ResponseStatusException invalidRating(int rating){
+        return log(new ResponseStatusException(HttpStatus.BAD_REQUEST,"Rating: "+rating+" is invalid."));
+
+    }
+
+    public static ResponseStatusException orderNotFound(Long id){
+        return log(new ResponseStatusException(HttpStatus.NOT_FOUND,"order with id: "+id));
+    }
+
+    public static ResponseStatusException emptyOrder(){
+        return log(new ResponseStatusException(HttpStatus.BAD_REQUEST,"Order must contain at least one item."));
+
+    }
+
+    public static ResponseStatusException invalidQuantity(int quantity){
+        return log(new ResponseStatusException(HttpStatus.BAD_REQUEST,"Invalid quantity: "+quantity));
+    }
 
 
 
