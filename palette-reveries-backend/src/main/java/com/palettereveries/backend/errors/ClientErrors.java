@@ -37,6 +37,10 @@ public class ClientErrors {
         return log(new ResponseStatusException(HttpStatus.NOT_FOUND,"user with id: "+id));
     }
 
+    public static  ResponseStatusException inquiryNotFound(Long id){
+        return log(new ResponseStatusException(HttpStatus.NOT_FOUND,"inquiry with id: "+id));
+    }
+
 
 
 
